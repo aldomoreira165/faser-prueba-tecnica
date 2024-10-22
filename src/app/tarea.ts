@@ -4,5 +4,6 @@ export class Tarea {
         public titulo: string,
         public minutos: number,
         public seleccionada: boolean = false,
+        public destacada: boolean = false
     ){}
 }

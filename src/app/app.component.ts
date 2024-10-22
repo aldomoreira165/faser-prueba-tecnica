@@ -44,12 +44,22 @@ export class AppComponent {
 		this.tareas = this.tareas.filter(tarea => !tarea.seleccionada);
 	}
 
+	// ordenar tareas por campo
 	async ordenarTareas(campo: string) {
 		this.ordenAscendente = !this.ordenAscendente;
 		this.tareas.sort((a, b) => {
 			if (a[campo] < b[campo]) return this.ordenAscendente ? -1 : 1;
 			if (a[campo] > b[campo]) return this.ordenAscendente ? 1 : -1;
 			return 0;
+		});
+	}
+
+	// destacar tareas seleccionadas
+	async marcarDestacadas() {
+		this.tareas.forEach(tarea => {
+			if (tarea.seleccionada) {
+				tarea.destacada = true;
+			}
 		});
 	}
 }

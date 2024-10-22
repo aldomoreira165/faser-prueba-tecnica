@@ -12,7 +12,7 @@ import { AppService } from './app.service';
 	imports: [
 		BrowserModule,
 		AppRoutingModule,
-		FormsModule
+		FormsModule,
 	],
 	providers: [ AppService ],
 	bootstrap: [ AppComponent ]

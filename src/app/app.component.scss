@@ -14,7 +14,7 @@ h1 {
 
 .functions-area {
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
 }
 
 .data-tarea {
@@ -29,4 +29,9 @@ h1 {
 
 .title-tarea:hover {
     cursor: pointer;
+}
+
+.tarea-destacada {
+    background-color: #ffd700;
+    font-weight: bold;
 }

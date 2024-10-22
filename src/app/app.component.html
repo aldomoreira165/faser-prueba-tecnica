@@ -13,6 +13,10 @@
 				<h3>Eliminar tareas</h3>
 				<button (click)="eliminarTareas()">Eliminar Tareas Seleccionadas </button>
 			</div>
+			<div class="favorite-area">
+				<h3>Marcar como destacadas</h3>
+				<button (click)="marcarDestacadas()">Marcar como destacadas</button>
+			</div>
 		</div>
 		<!-- tabla para mostrar las tareas -->
 		<div class="table-area">
@@ -25,7 +29,7 @@
 					</tr>
 				</thead>
 				<tbody>
-					<tr *ngFor="let tarea of tareas">
+					<tr *ngFor="let tarea of tareas" [class.tarea-destacada]="tarea.destacada">
 						<td class="data-tarea">{{ tarea.titulo }}</td>
 						<td class="data-tarea">{{ tarea.minutos }}</td>
 						<td class="data-tarea"><input type="checkbox" (change)="seleccionarTarea(tarea)"/></td>
