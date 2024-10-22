@@ -12,6 +12,11 @@ h1 {
     grid-template-columns: 1fr 1fr;
 }
 
+.functions-area {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
 .data-tarea {
     padding: 10px;
     border: 1px solid #000;

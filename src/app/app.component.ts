@@ -37,4 +37,9 @@ export class AppComponent {
 		tarea.seleccionada = !tarea.seleccionada;
 		console.log(this.tareas)
 	}
+
+	// eliminar tareas seleccionadas
+	eliminarTareas() {
+		this.tareas = this.tareas.filter(tarea => !tarea.seleccionada);
+	}
 }

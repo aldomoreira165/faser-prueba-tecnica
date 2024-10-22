@@ -2,13 +2,19 @@
 	<h1>Prueba técnica - Estudio Faser</h1>
 	<div class="main-area">
 		<!-- form para crear nuevas tareas -->
-		<div>
-			<h2>Crear nueva tarea</h2>
-			<input type="text" placeholder="Título de la tarea" [(ngModel)]="tituloTarea"/>
-			<input type="number" placeholder="Duración (minutos)" [(ngModel)]="minutosTarea"/>
-			<button (click)="agregarTarea()" >Agregar Tarea</button>
+		<div class="functions-area">
+			<div class="create-area">
+				<h3>Crear nueva tarea</h3>
+				<input type="text" placeholder="Título de la tarea" [(ngModel)]="tituloTarea"/>
+				<input type="number" placeholder="Duración (minutos)" [(ngModel)]="minutosTarea"/>
+				<button (click)="agregarTarea()" >Agregar Tarea</button>
 			</div>
-			<!-- tabla para mostrar las tareas -->
+			<div class="delete-area">
+				<h3>Eliminar tareas</h3>
+				<button (click)="eliminarTareas()">Eliminar Tareas Seleccionadas </button>
+			</div>
+		</div>
+		<!-- tabla para mostrar las tareas -->
 		<div class="table-area">
 			<h2>Listado de tareas</h2>
 			<table>
