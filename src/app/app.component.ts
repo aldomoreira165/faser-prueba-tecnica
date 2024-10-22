@@ -31,4 +31,10 @@ export class AppComponent {
 		this.tituloTarea = '';
 		this.minutosTarea = 0;
 	}
+
+	// seleccionar una tarea
+	seleccionarTarea(tarea: Tarea) {
+		tarea.seleccionada = !tarea.seleccionada;
+		console.log(this.tareas)
+	}
 }
