@@ -20,15 +20,15 @@
 			<table>
 				<thead>
 					<tr>
-						<th>Título</th>
-						<th>Duración (minutos)</th>
+						<th class="title-tarea" (click)="ordenarTareas('titulo')">Título</th>
+						<th class="title-tarea" (click)="ordenarTareas('minutos')">Duración (minutos)</th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr *ngFor="let tarea of tareas">
 						<td class="data-tarea">{{ tarea.titulo }}</td>
 						<td class="data-tarea">{{ tarea.minutos }}</td>
-						<td><input type="checkbox" (change)="seleccionarTarea(tarea)"/></td>
+						<td class="data-tarea"><input type="checkbox" (change)="seleccionarTarea(tarea)"/></td>
 					</tr>
 				</tbody>
 			</table>

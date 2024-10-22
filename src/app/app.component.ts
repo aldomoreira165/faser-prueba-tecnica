@@ -11,6 +11,7 @@ export class AppComponent {
 	tareas: Tarea[];
 	tituloTarea: string = '';
 	minutosTarea: number = 0;
+	ordenAscendente = true;
 
 	constructor(
         public service: AppService,
@@ -33,13 +34,22 @@ export class AppComponent {
 	}
 
 	// seleccionar una tarea
-	seleccionarTarea(tarea: Tarea) {
+	async seleccionarTarea(tarea: Tarea) {
 		tarea.seleccionada = !tarea.seleccionada;
 		console.log(this.tareas)
 	}
 
 	// eliminar tareas seleccionadas
-	eliminarTareas() {
+	async eliminarTareas() {
 		this.tareas = this.tareas.filter(tarea => !tarea.seleccionada);
+	}
+
+	async ordenarTareas(campo: string) {
+		this.ordenAscendente = !this.ordenAscendente;
+		this.tareas.sort((a, b) => {
+			if (a[campo] < b[campo]) return this.ordenAscendente ? -1 : 1;
+			if (a[campo] > b[campo]) return this.ordenAscendente ? 1 : -1;
+			return 0;
+		});
 	}
 }
