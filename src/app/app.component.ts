@@ -62,4 +62,9 @@ export class AppComponent {
 			}
 		});
 	}
+
+	// ordenar tareas aleatoriamente
+	async ordenarAleatorio() {
+		this.tareas.sort(() => Math.random() - 0.5);
+	}
 }

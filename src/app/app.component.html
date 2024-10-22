@@ -17,6 +17,10 @@
 				<h3>Marcar como destacadas</h3>
 				<button (click)="marcarDestacadas()">Marcar como destacadas</button>
 			</div>
+			<div class="order-area">
+				<h3>Ordenar aleatoriamente</h3>
+				<button (click)="ordenarAleatorio()">Ordenar aleatoriamente</button>
+			</div>
 		</div>
 		<!-- tabla para mostrar las tareas -->
 		<div class="table-area">
@@ -26,6 +30,7 @@
 					<tr>
 						<th class="title-tarea" (click)="ordenarTareas('titulo')">Título</th>
 						<th class="title-tarea" (click)="ordenarTareas('minutos')">Duración (minutos)</th>
+						<th class="title-tarea">Seleccionada</th>
 					</tr>
 				</thead>
 				<tbody>
